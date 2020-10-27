@@ -2,6 +2,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from datetime import date, datetime
 from operator import itemgetter
 import json, logging, time, threading, warnings
+import multiprocessing
 
 try:
     import queue
@@ -247,7 +248,7 @@ class CloudWatchLogHandler(handler_base_class):
             for cwl_message in cwl_messages:
                 if self.use_queues:
                     if stream_name not in self.queues:
-                        self.queues[stream_name] = queue.Queue()
+                        self.queues[stream_name] = multiprocessing.JoinableQueue()
                         thread = threading.Thread(target=self.batch_sender,
                                                   args=(self.queues[stream_name], stream_name, self.send_interval,
                                                         self.max_batch_size, self.max_batch_count))
