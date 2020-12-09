@@ -266,6 +266,7 @@ Links
 -----
 * `Project home page (GitHub) <https://github.com/kislyuk/watchtower>`_
 * `Documentation (Read the Docs) <https://watchtower.readthedocs.io/en/latest/>`_
+* `Reference Docs (Contour) <https://docs.contour.so/AuraVisionLabs/watchtower/getting-started>`_
 * `Package distribution (PyPI) <https://pypi.python.org/pypi/watchtower>`_
 * `AWS CLI CloudWatch Logs plugin <https://pypi.python.org/pypi/awscli-cwlogs>`_
 * `Docker awslogs adapter <https://github.com/docker/docker/blob/master/daemon/logger/awslogs/cloudwatchlogs.go>`_
